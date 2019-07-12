@@ -16,7 +16,8 @@ function CalcularPrecio ()
      var dto;   
      var finalp;
      var brand;
-     var iibb;
+     var optionA;
+     var finalIB;
       
 
         quant= document.getElementById("Cantidad").value;
@@ -29,18 +30,33 @@ function CalcularPrecio ()
     
         if (quant>= 6) {
                 console.log("Condition A Works");
-                        amount= punit*quant;
+                        amount= punit* quant;
                         dto= (amount* 50)/ 100;
-                        finalp= ("dto 50%: "+ (amount - dto)+ "$.");
-                        document.getElementById("precioDescuento").value= finalp;
-                } 
+                        finalp= amount - dto;
+                        document.getElementById("precioDescuento").value= finalp+ "$.";
+                        optionA= amount-dto;
+                        if (optionA>= 120) {
+                                iibb= (optionA*10)/100;
+                                finalIB= finalp+iibb;
+                                document.getElementById("precioDescuento").value= finalIB+ "$.";
+                                alert("Usted está pagando "+ iibb+ "de IIBB.")
+                        }
+        } 
                 else if (quant== 5) {
                         console.log ("Condition B Works");
                                 amount= punit* quant;
                                 dto= (amount* 30)/ 100;
-                                finalp= ("dto 30%: "+(amount - dto)+ "$.");
-                                document.getElementById("precioDescuento").value= finalp;
-                                               if (brand=="ArgentinaLuz") {
+                                finalp= amount - dto;
+                                document.getElementById("precioDescuento").value= finalp+ "$.";
+                                optionA= amount-dto;
+                                        if (optionA>= 120) {
+                                                iibb=(optionA*10)/100;
+                                                finalIB= finalp+iibb;
+                                                document.getElementById("precioDescuento").value= finalIB+ "$.";
+                                                alert("Usted está pagando"+ iibb+ "de IIBB.")
+                                                
+                                        }      
+                                        if (brand=="ArgentinaLuz") {
                                                dto= (amount*40)/ 100;
                                                finalp= ("dto 40%: "+(amount - dto)+ "$.");
                                                document.getElementById("precioDescuento").value= finalp;                
@@ -50,8 +66,8 @@ function CalcularPrecio ()
                         console.log ("Condition C Works");
                                 amount= punit* quant;
                                 dto= (amount* 20)/ 100;
-                                finalp= ("dto 20%: "+(amount- dto)+ "$.");
-                                document.getElementById("precioDescuento").value= finalp;
+                                finalp= amount- dto;
+                                document.getElementById("precioDescuento").value= finalp+ "$.";
                                         if (brand=="ArgentinaLuz") {
                                                 dto= (amount*25)/ 100;
                                                 finalp= ("dto 25%: "+(amount - dto)+ "$.");
@@ -59,29 +75,26 @@ function CalcularPrecio ()
                                         }      
                                         if (brand=="FelipeLamparas") {
                                                         dto= (amount*25)/ 100;
-                                                        finalp= ("dto 25%: "+(amount - dto)+ "$.");
-                                                        document.getElementById("precioDescuento").value= finalp;
+                                                        finalp= amount - dto;
+                                                        document.getElementById("precioDescuento").value= finalp+ "$.";
                                         }                                        
                 }        
                 else if (quant== 3) {
                         console.log ("Condition D Works");
                                 amount= punit* quant;
                                 dto= (amount* 20)/ 100;
-                                finalp= ("dto 5%: "+(amount- dto)+ "$.");
-                                document.getElementById("precioDescuento").value= finalp;
+                                finalp= amount- dto;
+                                document.getElementById("precioDescuento").value= finalp+ "$.";
                                         if (brand=="ArgentinaLuz") {
                                                 dto= (amount*15)/ 100;
-                                                finalp= ("dto 15%: "+(amount - dto)+ "$.");
-                                                document.getElementById("precioDescuento").value= finalp;  
+                                                finalp= amount - dto;
+                                                document.getElementById("precioDescuento").value= finalp+ "$.";  
                                         }        
                                         if (brand=="FelipeLamparas") {
                                                 dto= (amount*10)/ 100;
-                                                finalp= ("dto 10%: "+(amount - dto)+ "$.");
+                                                finalp= amount - dto;
                                                 document.getElementById("precioDescuento").value= finalp;
                                         }        
                 }
-                else if ((document.getElementById("precioDescuento").value) >120) {
-                        console.log("Alerta de monto superior." );
-                }               
 }
  //document.getElementById("precioDescuento").value= ((35*3)+"$.");    
