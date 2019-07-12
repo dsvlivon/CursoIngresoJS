@@ -10,5 +10,78 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+     var quant;
+     var punit;
+     var amount;
+     var dto;   
+     var finalp;
+     var brand;
+     var iibb;
+      
+
+        quant= document.getElementById("Cantidad").value;
+        quant= parseInt(quant);
+
+        punit= 35;
+        
+
+        brand= document.getElementById("Marca").value;
+    
+        if (quant>= 6) {
+                console.log("Condition A Works");
+                        amount= punit*quant;
+                        dto= (amount* 50)/ 100;
+                        finalp= ("dto 50%: "+ (amount - dto)+ "$.");
+                        document.getElementById("precioDescuento").value= finalp;
+                } 
+                else if (quant== 5) {
+                        console.log ("Condition B Works");
+                                amount= punit* quant;
+                                dto= (amount* 30)/ 100;
+                                finalp= ("dto 30%: "+(amount - dto)+ "$.");
+                                document.getElementById("precioDescuento").value= finalp;
+                                               if (brand=="ArgentinaLuz") {
+                                               dto= (amount*40)/ 100;
+                                               finalp= ("dto 40%: "+(amount - dto)+ "$.");
+                                               document.getElementById("precioDescuento").value= finalp;                
+                                        }
+                }
+                else if (quant== 4) {
+                        console.log ("Condition C Works");
+                                amount= punit* quant;
+                                dto= (amount* 20)/ 100;
+                                finalp= ("dto 20%: "+(amount- dto)+ "$.");
+                                document.getElementById("precioDescuento").value= finalp;
+                                        if (brand=="ArgentinaLuz") {
+                                                dto= (amount*25)/ 100;
+                                                finalp= ("dto 25%: "+(amount - dto)+ "$.");
+                                                document.getElementById("precioDescuento").value= finalp;               
+                                        }      
+                                        if (brand=="FelipeLamparas") {
+                                                        dto= (amount*25)/ 100;
+                                                        finalp= ("dto 25%: "+(amount - dto)+ "$.");
+                                                        document.getElementById("precioDescuento").value= finalp;
+                                        }                                        
+                }        
+                else if (quant== 3) {
+                        console.log ("Condition D Works");
+                                amount= punit* quant;
+                                dto= (amount* 20)/ 100;
+                                finalp= ("dto 5%: "+(amount- dto)+ "$.");
+                                document.getElementById("precioDescuento").value= finalp;
+                                        if (brand=="ArgentinaLuz") {
+                                                dto= (amount*15)/ 100;
+                                                finalp= ("dto 15%: "+(amount - dto)+ "$.");
+                                                document.getElementById("precioDescuento").value= finalp;  
+                                        }        
+                                        if (brand=="FelipeLamparas") {
+                                                dto= (amount*10)/ 100;
+                                                finalp= ("dto 10%: "+(amount - dto)+ "$.");
+                                                document.getElementById("precioDescuento").value= finalp;
+                                        }        
+                }
+                else if ((document.getElementById("precioDescuento").value) >120) {
+                        console.log("Alerta de monto superior." );
+                }               
 }
+ //document.getElementById("precioDescuento").value= ((35*3)+"$.");    
