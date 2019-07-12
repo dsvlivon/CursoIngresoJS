@@ -1,23 +1,15 @@
 function mostrar()
 {
-    var etario
-        
-        etario = document.getElementById("edad").Value;
 
-        etario = parseInt(etario);
-        
-        console.log("Su edad es "+etario);
+var etario
 
-        if (etario==15) 
-        {
-            alert("niña bonita")
-        } 
-        else 
-        {
-            if (etario=>15) 
-            {
-               alert("niña ve al cole")
-            } 
-            else 
-            {
-               alert("anda a laburar, chantun")
+    etario= document.getElementById("edad").value;
+
+    if (etario=15) 
+    {
+    alert("niño/a bonito/a");    
+    console.log("niño/a bonito/a")
+    }
+
+} 
+            
