@@ -10,14 +10,13 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-     var quant;
-     var punit;
-     var amount;
+     var cantidad;
+     
      var dto;   
-     var finalp;
-     var brand;
-     var optionA;
-     var finalIB;
+     var preciofinal;
+     var marca;
+     var iibb;
+     var dto;
       
 
         quant= document.getElementById("Cantidad").value;
@@ -25,76 +24,16 @@ function CalcularPrecio ()
 
         punit= 35;
         
-
         brand= document.getElementById("Marca").value;
     
-        if (quant>= 6) {
-                console.log("Condition A Works");
-                        amount= punit* quant;
-                        dto= (amount* 50)/ 100;
-                        finalp= amount - dto;
-                        document.getElementById("precioDescuento").value= finalp+ "$.";
-                        optionA= amount-dto;
-                        if (optionA>= 120) {
-                                iibb= (optionA*10)/100;
-                                finalIB= finalp+iibb;
-                                document.getElementById("precioDescuento").value= finalIB+ "$.";
-                                alert("Usted está pagando "+ iibb+ "de IIBB.")
-                        }
-        } 
-                else if (quant== 5) {
-                        console.log ("Condition B Works");
-                                amount= punit* quant;
-                                dto= (amount* 30)/ 100;
-                                finalp= amount - dto;
-                                document.getElementById("precioDescuento").value= finalp+ "$.";
-                                optionA= amount-dto;
-                                        if (optionA>= 120) {
-                                                iibb=(optionA*10)/100;
-                                                finalIB= finalp+iibb;
-                                                document.getElementById("precioDescuento").value= finalIB+ "$.";
-                                                alert("Usted está pagando"+ iibb+ "de IIBB.")
-                                                
-                                        }      
-                                        if (brand=="ArgentinaLuz") {
-                                               dto= (amount*40)/ 100;
-                                               finalp= ("dto 40%: "+(amount - dto)+ "$.");
-                                               document.getElementById("precioDescuento").value= finalp;                
-                                        }
+                if (quant>= 6) 
+                {
+                        dto=
                 }
-                else if (quant== 4) {
-                        console.log ("Condition C Works");
-                                amount= punit* quant;
-                                dto= (amount* 20)/ 100;
-                                finalp= amount- dto;
-                                document.getElementById("precioDescuento").value= finalp+ "$.";
-                                        if (brand=="ArgentinaLuz") {
-                                                dto= (amount*25)/ 100;
-                                                finalp= ("dto 25%: "+(amount - dto)+ "$.");
-                                                document.getElementById("precioDescuento").value= finalp;               
-                                        }      
-                                        if (brand=="FelipeLamparas") {
-                                                        dto= (amount*25)/ 100;
-                                                        finalp= amount - dto;
-                                                        document.getElementById("precioDescuento").value= finalp+ "$.";
-                                        }                                        
-                }        
-                else if (quant== 3) {
-                        console.log ("Condition D Works");
-                                amount= punit* quant;
-                                dto= (amount* 20)/ 100;
-                                finalp= amount- dto;
-                                document.getElementById("precioDescuento").value= finalp+ "$.";
-                                        if (brand=="ArgentinaLuz") {
-                                                dto= (amount*15)/ 100;
-                                                finalp= amount - dto;
-                                                document.getElementById("precioDescuento").value= finalp+ "$.";  
-                                        }        
-                                        if (brand=="FelipeLamparas") {
-                                                dto= (amount*10)/ 100;
-                                                finalp= amount - dto;
-                                                document.getElementById("precioDescuento").value= finalp;
-                                        }        
-                }
-}
+
+                else if 
+                {
+                        (qu)
+                
+                
  //document.getElementById("precioDescuento").value= ((35*3)+"$.");    
