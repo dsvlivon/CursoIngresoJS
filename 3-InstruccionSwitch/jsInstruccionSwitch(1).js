@@ -2,25 +2,30 @@ function mostrar()
 {
 //tomo la edad  
     var mes;
-    
+    var anuncio;    
 
     mes= document.getElementById("mes").value;
 
-    switch(mes) {
-
-        case "Enero":
-            alert("Que comiences bien el año!!!");
+    switch(mes) 
+    {
+    case "Enero":
+        anuncio= "Que comiences bien el año!!!";
         break;
-        case "Marzo":
-            alert("A clases!!!");
+    case "Marzo":
+        anuncio= "A clases!!!";
         break;
-        case "Julio":
-            alert("Se vienen las vacaciones!!!");
+    case "Julio":
+        anuncio= "Se vienen las vacaciones!!!";
         break;
-        case "Diciembre":
-            alert("Felices Fiestas!!!");
+    case "Diciembre":
+    default:
+        anuncio= "Felices Fiestas!!!";
         break;
-    }    
-
+    }
+    alert(anuncio);
 
 }//FIN DE LA FUNCIÓN
+
+    
+
+    
