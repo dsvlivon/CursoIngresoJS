@@ -7,17 +7,19 @@ function mostrar()
     primerNumero= prompt("Ingrese el primer número.");
     segundoNumero= prompt("Ingrese el segundo número.");
 
-    if (primerNumero == segundoNumero) {
+    if (primerNumero == segundoNumero) 
+    {
         resultado(primerNumero+segundoNumero);
     }
         else 
-    {
+        {
         primerNumero=parseInt(primerNumero);
         segundoNumero=parseInt(segundoNumero);
 
-        if(primerNumero>segundoNumero);
-        {
-            resultado=primerNumero-segundoNumero;
+            if(primerNumero>segundoNumero);
+            {
+                resultado=primerNumero-segundoNumero;
+            }
         }
 
         else
@@ -28,6 +30,6 @@ function mostrar()
                 resultado= primerNumero+segundoNumero;
             }
         }
+        
     }
-    alert(resultado)
-}
+    alert(resultado);
