@@ -1,40 +1,40 @@
 function mostrar()
 {
-
-	var contador=0;
-	var notaMasBaja;
-	var notaMasAlta;
-	// declarar variables
-	
+	var numero;
+	/*var contador=0;*/
+	var minimo;
+	var maximo;
 	var respuesta='si';
-	notaMasAlta=9999999;
-	notaMasBaja=0;
+	var esPrimeraIteracion= true;
+
+	/*minimo=9999;
+	maximo=0;*/
 
 	while(respuesta!='no')
 	{
 		numero= prompt("ingrese un numero:")
 		numero= parseInt(numero);
-		while (isNaN(numero) == true)
+		
+		if(esPrimeraIteracion === true)
 		{
-			numero= prompt("error, ingrese un numero:")
-			numero= parseInt(numero);
+			maximo = numero;
+			minimo = numero;
+			esPrimeraIteracion = false;
 		}
-		respuesta= prompt("ingrese no para finalizar la carga de datos.")
-	
-	}
+		else if (numero > maximo)
+		{
+			maximo = numero;
+		}
+		else if (numero < minimo)
+		{
+			minimo = numero;
+		}
+		respuesta=prompt("desea ingresar otro dato si/no")
+	}	
 
-	if(nota<notaMasBaja) //flag p nota menor 
-	{
-	  notaMasBaja= nota;
-	}
+document.getElementById("maximo").value=maximo;
+document.getElementById("minimo").value=minimo;
 
-	if(nota>notaMasAlta) //flag p nota menor
-	{
-	  notaMasAlta= nota;
-	}
-
-document.getElementById("maximo").value=notaMasAlta;
-document.getElementById("minimo").value=notaMasBaja;
 
 }//FIN DE LA FUNCIÓN
 
@@ -42,5 +42,9 @@ document.getElementById("minimo").value=notaMasBaja;
 {
 	numero= prompt("ingrese un numero:")
 	numero= parseInt(numero);
-}
+}*/
+
+/*
+"2"==2 true (comparacion abstracta)
+"2"===2 false (comparacion estricta)
 */
