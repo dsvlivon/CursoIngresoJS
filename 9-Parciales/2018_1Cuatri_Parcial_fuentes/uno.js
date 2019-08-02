@@ -1,48 +1,16 @@
-
 function mostrar()
 {
-    /*var numero;
-    var letra;
-    var respuesta="si";
-    var minimo=50   ;
-    var x=50;
-    var letramin=null;
+    var ancho;
+    var largo;
 
-    while (respuesta=="si") 
-    {
-        numero=prompt("ingrese numero:");
-        numero=parseInt(numero);
-        while (isNaN(numero)==true || numero <0 || numero>50) 
-        {
-            numero=prompt("ingrese numero:");
-            numero=parseInt(numero);
-        }
-        letra=prompt("ingrese letra:");
-        while (isNaN(letra)==false) 
-        {
-            letra=prompt("ingrese letra:")
-        }
-        if(numero<minimo)
-        {
-            minimo=numero;
-            letramin=letra
-        }
+    largo=prompt("Ingrese el largo: ");
+    largo=parseInt(largo);
+    ancho=prompt("Ingrese el ancho: ");
+    ancho=parseInt(ancho);
 
-    respuesta=prompt("ingresar otro dato:");
-    }
-   
-    alert("numero minimo es:"+minimo +"letra minima es:"+letramin)*/
+    alert("el perimetro del rectángulo es: "+(ancho+largo)*2+"m2")
+} // FIN DE FUNCION
 
-    var ancho
-    var largo
-    var perimetro
-
-        ancho= prompt("introduzca ancho: ");
-        largo= prompt("introduzca largo: ");
-        
-        perimetro= (ancho* largo)*2;
-
-        alert("El perimetro resultante es: "+ perimetro+ "mts²");
-        console.log("El perimetro resultante es: "+ perimetro+ "mts²");
-
-}
+/*Bienvenidos. 
+Realizar el algoritmo que pida el ancho y el largo de un rectángulo 
+por prompt y que muestre el perímetro por alert.*/
