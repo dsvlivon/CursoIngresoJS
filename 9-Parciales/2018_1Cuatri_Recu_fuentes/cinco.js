@@ -1,26 +1,32 @@
 function mostrar()
 {
-var dia;
-var anuncio;
+    var dia;
+    var mensaje;
 
-dia=prompt("ingrese un día de la semana");
+    dia=prompt("Ingrese un día de la semana: ")
 
-switch (dia) 
-{
-    case "lunes":
-    case "martes":
-    case "miercoles":
-    case "jueves":
-    case "viernes":
-        anuncio="a trabajar";
-        break;
-    case "sabado":
-    case "domingo":
-        anuncio="buen finde";
-        break;
-    default:
-        anuncio="dia inválido";
-        break;
+    switch (dia) 
+    {
+        case "lunes":
+        case "martes":
+        case "miercoles":
+        case "jueves":
+        case "viernes":
+            mensaje=" a trabajar"
+            break;
+        case "sabado":
+        case "domingo":
+            mensaje=" buen finde"
+            break;
+        default:
+            mensaje=" ha ingresado un día inválido."
+            break;
+    }
+    alert(mensaje);
 }
-    alert(anuncio)
-}
+/*Bienvenidos. 
+(SWITCH)pedir el ingreso de un día de la semana, 
+si es fin de semana mostrar " buen finde", 
+si es día hábil “ a trabajar”, 
+si no es un día valido, también informarlo, 
+usar una sola ventana alert.*/

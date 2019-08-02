@@ -1,0 +1,31 @@
+var numero;
+	var contador;
+	var suma;
+	var promedio;
+	var respuesta;
+
+	contador=0;
+	suma=0;
+	numero=prompt("Ingrese un numero:");
+	numero=parseInt(numero);
+	
+	respuesta=prompt("¿desea ingresar otro numero?"+"\n"+"Para finalizar ingrese: no"+"\n"+"De lo contrario ingrese cualqier otro valor.");
+
+	while (respuesta!="no") 
+	{
+		numero=prompt("Ingrese un numero:");
+		numero=parseInt(numero);
+				
+		suma=suma+numero;
+		contador=contador+1
+		
+		respuesta=prompt("¿desea ingresar otro numero?"+"\n"+"s: ingrese para si."+"\n"+"Ingrese cualquier otro valor para no.")
+	}
+
+	numero=parseInt(numero);
+	suma=parseInt(suma);
+	promedio=suma/contador;
+
+
+	document.getElementById("suma").value=suma;
+	document.getElementById("promedio").value=promedio;	

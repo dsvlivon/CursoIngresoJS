@@ -1,14 +1,17 @@
 function mostrar()
 {
-	//var respuesta ="s"
-	var contador =0;
-	
+	var numero;
+	var contador;
 
-	while (contador <10)
+	contador=0;
+
+	while (contador<10) //limite de contador
 	{
-		contador= contador+1;
-		alert("El numero es: " +contador);
+		contador=contador+1;
+		alert(contador);
 	}
+}//FIN DE LA FUNCIÓN
+
 ////////////////////////////////////////////////////////
 
 	/*nota=prompt("ingrese nota");
@@ -41,8 +44,4 @@ function mostrar()
 
 //iteracion con validacion
 */
-
-}//FIN DE LA FUNCIÓN
-
-
 

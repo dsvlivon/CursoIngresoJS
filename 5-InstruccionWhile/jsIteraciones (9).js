@@ -1,50 +1,48 @@
 function mostrar()
 {
 	var numero;
-	/*var contador=0;*/
-	var minimo;
 	var maximo;
-	var respuesta='si';
-	var esPrimeraIteracion= true;
+	var minimo;
+	var respuesta;
 
-	/*minimo=9999;
-	maximo=0;*/
+	maximo= 0;
+	minimo= 999999;
+	respuesta= "si";
 
-	while(respuesta!='no')
+	while (respuesta== "si") 
 	{
-		numero= prompt("ingrese un numero:")
-		numero= parseInt(numero);
+		numero=prompt("Ingrese un numero:");
+		numero=parseInt(numero);
+
+		while (isNaN(numero)== true) // validador para ingresar solo numero	
+		{	
+			numero= prompt("Error. Ingrese un numero:")
+			numero= parseInt(numero);
+		}
 		
-		if(esPrimeraIteracion === true)
+		if (numero< minimo) // flag para minimos
 		{
-			maximo = numero;
-			minimo = numero;
-			esPrimeraIteracion = false;
+			minimo= numero;	
 		}
-		else if (numero > maximo)
+		
+		if (numero> maximo) // flag para maximos
 		{
-			maximo = numero;
+			maximo= numero;	
 		}
-		else if (numero < minimo)
-		{
-			minimo = numero;
-		}
-		respuesta=prompt("desea ingresar otro dato si/no")
-	}	
 
-document.getElementById("maximo").value=maximo;
-document.getElementById("minimo").value=minimo;
+		respuesta= prompt("Para ingresar otro numero ingrese: si");
+	}
+
+	document.getElementById("maximo").value= maximo;
+	document.getElementById("minimo").value= minimo;
 
 
+	
 }//FIN DE LA FUNCIÓN
 
 /*while (isNaN(numero))== true // validador para ingresar solo numero
 {
 	numero= prompt("ingrese un numero:")
 	numero= parseInt(numero);
-}*/
-
-/*
-"2"==2 true (comparacion abstracta)
-"2"===2 false (comparacion estricta)
+}
 */

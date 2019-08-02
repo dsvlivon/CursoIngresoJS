@@ -43,9 +43,7 @@ switch (hora)
         {
             anuncio+=" A dormir.";
         }
-    
-        
-        break;
+       break;
     
     default:
         anuncio= "La hora no es válida.";

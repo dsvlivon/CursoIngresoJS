@@ -1,32 +1,36 @@
 function mostrar()
 {
 	var numero;
-	var contador=0;
-	var acumulador=0;
+	var contador;
+	var promedio;
+	var suma;
 
-	for (var i= 0; i<5; i++)
-	}
+	numero=prompt("Ingrese un numero: ");
+	numero=parseInt(numero);
 
-	/*var numero;
-	var contador=0;
-	var acumulador=0;
+	contador=0;
+	suma=0;
 
-	numero= prompt("ingrese un número cualquiera.")
-	numero= parseInt(numero);
-
-	while (contador<5) 
-	{
-		numero= prompt("ingrese otro número cualquiera.")
-		numero= parseInt(numero);
+	
 		
-		acumulador += numero;		
-		contador=contador+1;
-	}
+		while (contador<5)
+		{
+			while (isNaN(numero)== true) // validador para ingresar solo numero	
+			{	
+				numero= prompt("Error. Ingrese un numero:")
+				numero= parseInt(numero);numero=prompt("Ingrese otro numero: ");
+			}
+			numero=parseInt(numero);
 
-acumulador= parseInt(acumulador);
+			contador=contador+1;
+			suma=suma+numero;
+		}	
+	numero=parseInt(numero);
+	suma=parseInt(suma);
+	promedio=suma/contador;
 
+	document.getElementById("suma").value=suma;
+	document.getElementById("promedio").value=promedio;
+	
 
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/contador;
-*/
 }//FIN DE LA FUNCIÓN
